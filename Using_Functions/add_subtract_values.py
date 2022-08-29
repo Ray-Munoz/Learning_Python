@@ -4,3 +4,7 @@
 def calculate(a,b):
     print(a+b)
     print(a-b)
+
+# Printing out the result
+res = calculate(30,20)
+print(res)
