@@ -2,10 +2,16 @@
 
 class vehicle:
     def __init__(self, name, max_speed, mileage):
+        self.name = name
         self.max_speed = max_speed
         self.mileage = mileage
-        self.name = name
+
 
 # modelX example
-modelX = vehicle(240, 18)
-print(modelX.max_speed, modelX.mileage)
+modelX = vehicle('Tesla',240, 18)
+print(modelX.name, modelX.max_speed, modelX.mileage)
+
+class bus(vehicle):
+    pass
+school_vehicle = bus('School-Bus', 140, 10)
+print(school_vehicle.name, school_vehicle.max_speed, school_vehicle.mileage)
