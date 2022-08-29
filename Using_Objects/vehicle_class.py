@@ -5,4 +5,6 @@ class vehicle:
         self.max_speed = max_speed
         self.mileage = mileage
 
-        
+# modelX example
+modelX = vehicle(240, 18)
+print(modelX.max_speed, modelX.mileage)
