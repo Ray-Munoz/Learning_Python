@@ -6,3 +6,6 @@ def gcd(a,b):
         a = b
         b = t % b
     return a
+
+print(gcd(20,8))
+print(gcd(10050, 555))
