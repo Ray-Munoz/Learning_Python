@@ -10,28 +10,29 @@ attempts = 0
 games = 0
 
 # Creating the random list generator
-random_list = random.randint(1,9)
+random_list = random.randint(1,10000)
 
 # Ask user to guess between 1 and 9
 game_start = input("Would you like to play a game? Enter yes/no: ")
 
 # Higher or lower
 while game_start == 'yes' :
-    guess = input("Pick a number between 1 and 9 (to exit: type exit): ")
+    guess = input("Pick a number between 1 and 10000 (to exit: type exit): ")
     if guess == "exit":
         print('Goodbye!')
         break
     if int(guess) == random_list:
         attempts += 1
         print ("Thats the number I guessed, you win!")
-        print("Here's how many guesses it took: ", {attempts})
-        print("Thanks for playing!")
-        break
-        # if input("Play again? yes/no ") == "no":
-        #     break
-        # else:
-        #     games += 1
-        #     print('This is game:', {games})
+        print("Here's how many guesses it took: ",{attempts})
+        if input("Play again? yes/no: ") == "no":
+            print("Thanks for playing!")
+            break
+        else:
+            random_list = random.randint(1,10000)
+            games += 1
+            attempts -= attempts
+            print('This is game:', {games})
     elif int(guess) < random_list:
         attempts += 1
         print("You guessed too low :(")
